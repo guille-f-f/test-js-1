@@ -26,18 +26,23 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  const newArray = [];
-  for(i=0; i<array.length; i++){
-     newArray[i] = array[i] + array[i];
-  }
-  return newArray;
+  // for
+  // const newArray = [];
+  // for(i=0; i<array.length; i++){
+  //    newArray[i] = ++array[i];
+  // }
+  // return newArray;
+  // metodo map
+  let nuevoArray = array.map((element)=>++element);
+  return nuevoArray;
 }
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  return array.push(elemento);
+  array.push(elemento);
+  return array;
 }
 
 function agregarItemAlComienzoDelArray(array, elemento) {
@@ -45,7 +50,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  return array.unshift(elemento);
+  array.unshift(elemento)
+  return array;
 }
 
 function dePalabrasAFrase(palabras) {
